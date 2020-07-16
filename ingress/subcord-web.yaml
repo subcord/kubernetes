@@ -16,6 +16,6 @@ spec:
   - host: subcord.dev
     http:
       paths:
-        - frontend:
+        - backend:
             serviceName: frontend
             servicePort: 80
