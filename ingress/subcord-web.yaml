@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
     - subcord.dev
-    secretName: subcord.dev
+    secretName: subcord-dev-tls
   rules:
   - host: subcord.dev
     http:
