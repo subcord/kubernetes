@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: scylla
+  name: scylla
+  namespace: subcord
+spec:
+  clusterIP: None
+  ports:
+    - port: 9042
+  selector:
+    app: scylla
