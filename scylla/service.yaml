@@ -6,7 +6,6 @@ metadata:
   name: scylla
   namespace: subcord
 spec:
-  clusterIP: None
   ports:
     - port: 9042
   selector:
