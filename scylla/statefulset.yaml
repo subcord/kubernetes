@@ -21,7 +21,7 @@ spec:
         - name: scylla
           image: scylladb/scylla:4.1.1
           imagePullPolicy: IfNotPresent
-          args: ["--seeds", "scylla-0.scylla.subcord.svc.cluster.local", "--smp", "2"]
+          args: ["--seeds", "scylla-0.scylla.subcord.svc.cluster.local", "--smp", "2", "--rpc-address", "0.0.0.0", "--broadcast-rpc-address", "$POD_IP"]
           ports:
             - containerPort: 7000
               name: intra-node
