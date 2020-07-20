@@ -7,8 +7,7 @@ metadata:
   namespace: subcord
 spec:
   serviceName: scylla
-  # Let's hope we never need more than 1 replica...
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: scylla
