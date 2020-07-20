@@ -72,14 +72,11 @@ spec:
           configMap:
             name: scylla
   volumeClaimTemplates:
-    - metadata:
-        name: scylla-data
-        labels:
-          app: scylla
-      spec:
-        storageClassName: manual
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 1Gi
+  - metadata:
+      name: scylla-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: scw-bssd-retain
+      resources:
+        requests:
+          storage: 1Gi
